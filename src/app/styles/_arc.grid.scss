@@ -1,0 +1,54 @@
+@import "./arc.core";
+@mixin grid($vertical: flex-start, $horizontal: flex-start, $wrap: wrap) {
+  /* autoprefixer: off */
+  display: flex;
+  align-items: $vertical;
+  justify-content: $horizontal;
+  flex-wrap: $wrap;
+  /* autoprefixer: on */
+}
+
+.grid,
+[grid] {
+  @include grid();
+}
+
+.wrap,
+[wrap] {
+  flex-wrap: wrap;
+  >* {
+    /* autoprefixer: off */
+    flex-grow: 1;
+    /* autoprefixer: on */
+  }
+}
+
+.no-wrap,
+[no-wrap] {
+  /* autoprefixer: off */
+  flex-wrap: nowrap;
+  /* autoprefixer: on */
+}
+
+.center-content,
+[center-content] {
+  @include grid(center, center, wrap);
+}
+
+arc-grid,
+[arc-grid] {
+  arc-row,
+  [arc-row] {
+    @include grid();
+  }
+  @for $i from 1 through 12 {
+    >arc-row[col="#{$i}"] {
+      >arc-col {
+        width: 100% / $i;
+        border: 1px solid red;
+        height: 200px;
+        min-width: 200px;
+      }
+    }
+  }
+}

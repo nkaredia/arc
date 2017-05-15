@@ -1,0 +1,40 @@
+$easings: (
+    (name: linear, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease, value: cubic-bezier(0.250, 0.100, 0.250, 1.000)),
+    (name: ease-in, value: cubic-bezier(0.420, 0.000, 1.000, 1.000)),
+    (name: ease-out, value: cubic-bezier(0.000, 0.000, 0.580, 1.000)),
+    (name: ease-in-out, value: cubic-bezier(0.420, 0.000, 0.580, 1.000)),
+    (name: ease-in-cubic, value: cubic-bezier(0.550, 0.085, 0.680, 0.530)),
+    (name: ease-in-cubic, value: cubic-bezier(0.550, 0.055, 0.675, 0.190)),
+    (name: ease-in-quart, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-quint, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-sine, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-expo, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-circ, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-back, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-quad, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-cubic, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-quart, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-quint, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-sine, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-expo, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-circ, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-out-back, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-quad, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-cubic, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-quart, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-quint, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-sine, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-expo, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-circ, value: cubic-bezier(0.250, 0.250, 0.750, 0.750)),
+    (name: ease-in-out-back, value: cubic-bezier(0.250, 0.250, 0.750, 0.750))
+) !default;
+
+$arc-directives: (
+    arc-grid,
+    arc-row,
+    arc-col,
+    arc-carousel,
+    arc-carousel-navigation,
+    arc-carousel-item
+) !default;

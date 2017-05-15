@@ -1,0 +1,15 @@
+@import "./arc.variables";
+@import "./arc.common";
+@function easing($easing) {
+  @each $e in $easings {
+    @if map-get($e, name)==$easing {
+      @return map-get($e, value);
+    }
+  }
+}
+
+@each $directive in $arc-directives {
+  #{$directive} {
+    @extend .arc-directive-common-behaviour;
+  }
+}
