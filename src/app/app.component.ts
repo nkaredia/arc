@@ -36,22 +36,18 @@ export class ArcCarousel { }
 export class ArcCarouselNavigation implements OnInit {
   element: Element;
   items: HTMLCollection;
-  offsetX: number;
-  maxOffset: number;
   active: number;
   constructor(el: ElementRef) {
     this.element = el.nativeElement;
   }
 
   ngOnInit() {
-    this.offsetX = 0;
     this.active = 1;
     const navs = this.createNavigationButtons();
     navs.forEach(v => {
       this.element.appendChild(v);
     });
     this.items = this.element.children;
-    this.maxOffset = ((this.items.length - 2) * this.element.clientWidth) - this.element.clientWidth;
   }
 
   private createNavigationButtons = () => {
@@ -75,17 +71,15 @@ export class ArcCarouselNavigation implements OnInit {
 
   private navigateLeft = (e: Event) => {
     if (this.active > 1) {
-      
+      this.element.scrollLeft = this.element.scrollLeft - this.items[0]['offsetWidth'];
+      --this.active;
     }
   }
 
   private navigateRight = (e: Event) => {
-    if (this.offsetX < this.maxOffset) {
-      (this.items[0] as HTMLDivElement).style.marginLeft = -(Math.abs(this.offsetX) + this.element.clientWidth) + 'px';
-      this.offsetX -= this.element.clientWidth;
+    if (this.active < this.items.length) {
+      this.element.scrollLeft = this.active++ * this.items[0]['offsetWidth'];
     }
-
-
   }
 }
 
